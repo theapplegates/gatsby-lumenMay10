@@ -4,7 +4,7 @@ import { graphql, StaticQuery } from "gatsby";
 import {
   GatsbyImage,
   GatsbyImageProps,
-  IGatsbyImageData,
+  GatsbyImageData,
 } from "gatsby-plugin-image";
 import { FileSystemNode } from "gatsby-source-filesystem";
 
@@ -35,7 +35,7 @@ const Image: FC<Props> = ({ path, ...rest }: Props) => (
             node {
               absolutePath
               childImageSharp {
-                gatsbyImageData(formats: [AUTO, AVIF, WEBP])
+                gatsbyImageData(formats: [AVIF, AUTO, WEBP])
               }
             }
           }
